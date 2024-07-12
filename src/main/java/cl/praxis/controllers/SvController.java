@@ -60,6 +60,11 @@ public class SvController extends HttpServlet {
 			e);
 			}
 		
+		if(rol.equals("administrativo")) {
+			RequestDispatcher rd = request.getRequestDispatcher("/views/home.html");
+			rd.forward(request, response);
+		}
+		
 		RequestDispatcher rd = request.getRequestDispatcher("/views/home.jsp");
 		rd.forward(request, response);
 
